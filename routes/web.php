@@ -13,6 +13,8 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
+Route::group(['middleware' => [], 'prefix' => 'v1'], function () {
+    Route::group(['middleware' => [], 'prefix' => 'sale'], function () {
+        Route::post('register', ['as' => 'register_sale', 'uses' => 'SaleController@register']);
+    });
 });
