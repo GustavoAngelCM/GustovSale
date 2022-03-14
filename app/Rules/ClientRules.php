@@ -46,7 +46,7 @@ class ClientRules
     public function rulesClientAdd(): array
     {
         return [
-            'ciNit' => 'bail|required|string|max:20|unique:users',
+            'ciNit' => 'bail|required|string|max:20',
             'nameReason' => 'bail|required|string|max:400'
         ];
     }

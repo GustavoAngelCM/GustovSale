@@ -39,7 +39,7 @@ class SaleDetailRules
     {
         return [
             'dishKey' => $this->request['dish'],
-            'quantity' => $this->request['nameReason'],
+            'quantity' => $this->request['quantity'],
             'subTotal' => $this->request['subTotal']
         ];
     }
