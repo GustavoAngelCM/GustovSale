@@ -16,5 +16,6 @@
 Route::group(['middleware' => [], 'prefix' => 'v1'], function () {
     Route::group(['middleware' => [], 'prefix' => 'sale'], function () {
         Route::post('/register', ['as' => 'register_sale', 'uses' => 'SaleController@register']);
+        Route::get('/report', ['as' => 'report_sale', 'uses' => 'SaleController@report']);
     });
 });

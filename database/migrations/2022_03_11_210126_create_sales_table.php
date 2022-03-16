@@ -15,7 +15,7 @@ class CreateSalesTable extends Migration
     {
         Schema::create('sales', function (Blueprint $table) {
             $table->id();
-            $table->string('keySale', 30)->unique();
+            $table->string('keySale', 150)->unique();
             $table->double('totalAmount', 10, 2);
             $table->bigInteger('client_id')->unsigned();
             $table->foreign('client_id')
